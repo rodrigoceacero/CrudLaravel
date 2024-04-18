@@ -24,7 +24,7 @@ class DepartmentController extends Controller
     {
         $request->validate(['name' => 'required|max:100']);
         $department = new Department($request->input());
-        $departmet->save();
+        $department->save();
         return redirect('departments');
     }
 
