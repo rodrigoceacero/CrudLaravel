@@ -71,7 +71,7 @@ class EmployeeController extends Controller
 
     public function EmployeeByDepartment()
     {
-        $data = Employee::select(DB::raw('count(employees.id as count, departments.name'))
+        $data = Employee::select(DB::raw('count(employees.id) as count, departments.name'))
         ->join('departments', 'departments.id', '=', 'employees.department_id')
         ->groupBy('departments.name')->get();
         return Inertia::render('Employees/Graphic', ['data' => $data]);
