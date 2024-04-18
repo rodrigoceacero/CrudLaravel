@@ -26,9 +26,14 @@ const form = useForm({
                         <InputLabel for="name" value="Department"></InputLabel>
                         <TextInput id="name" v-model="form.name" autofocus required type="text" class="mt-1 block w-full"></TextInput>
                         <InputError :message="form.errors.name" class="mt-2"></InputError>
-                        <PrimaryButton :disabled="form.processing">
-                            <i class="fa-solid fa-save"></i> Save
-                        </PrimaryButton>
+                        <div class="flex justify-between">
+                            <PrimaryButton :disabled="form.processing">
+                                <i class="fa-solid fa-save"></i> Save
+                            </PrimaryButton>
+                            <button :disabled="form.close" @click="route('departments.index')" :class="'px-4 py-2 bg-gray-400 text-black border rounded-md font-semibold text-xs'">
+                                <i class="fa-solid fa-cancel"></i> Cancel
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
