@@ -9,6 +9,11 @@ import { Head, useForm } from '@inertiajs/vue3';
 const form = useForm({
     name:''
 });
+
+const closeForm = () =>{
+    route('departments.index')
+}
+
 </script>
 
 <template>
@@ -30,9 +35,13 @@ const form = useForm({
                             <PrimaryButton :disabled="form.processing">
                                 <i class="fa-solid fa-save"></i> Save
                             </PrimaryButton>
-                            <button :disabled="form.close" @click="route('departments.index')" :class="'px-4 py-2 bg-gray-400 text-black border rounded-md font-semibold text-xs'">
+                            <!-- <button @click="closeForm" :class="'px-4 py-2 bg-gray-400 text-black border rounded-md font-semibold text-xs'">
                                 <i class="fa-solid fa-cancel"></i> Cancel
-                            </button>
+                            </button> -->
+                            <a :href=" route('departments.index') " 
+                            :class="'px-4 py-2 bg-gray-400 text-black border rounded-md font-semibold text-xs'">
+                                <i class="fa-solid fa-cancel"></i> Cancel
+                            </a>
                         </div>
                     </form>
                 </div>
