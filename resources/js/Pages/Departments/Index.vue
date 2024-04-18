@@ -40,7 +40,7 @@ const deleteDepartment = (id, name) =>{
         </template>
 
         <div class="py-12">
-            <div class="bg-white grid v-screen place-items-center">
+            <div class="grid v-screen place-items-center">
                 <div class="mt-3 mb-3 flex">
                     <Link :href="route('departments.create')" 
                     :class="'px-4 py-2 bg-gray-800 text-white border rounded-md font-semibold text-xs'">
@@ -48,10 +48,10 @@ const deleteDepartment = (id, name) =>{
                     </Link>
                 </div>
             </div>
-            <div class="bg-white grid v-screen place-items-center">
-                <table class="table-auto border border-gray-400">
+            <div class="grid v-screen place-items-center">
+                <table class="table-auto border border-gray-400 bg-white">
                     <thead>
-                        <tr class="bg-gray-100">
+                        <tr class="bg-gray-200">
                             <th class="px-4 py-4">#</th>
                             <th class="px-4 py-4">DEPARTMENTS</th>
                             <th class="px-4 py-4"></th>

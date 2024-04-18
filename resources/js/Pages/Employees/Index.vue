@@ -104,15 +104,15 @@ const deleteEmployee = (id, name) =>{
         </template>
 
         <div class="py-12">
-            <div class="bg-white grid v-screen place-items-center">
+            <div class="grid v-screen place-items-center">
                 <div class="mt-3 mb-3 flex">
                     <PrimaryButton @click="$event => openModal(1)">
                         <i class="fa-solid fa-plus-circle"></i> Add
                     </PrimaryButton>
                 </div>
             </div>
-            <div class="bg-white grid v-screen place-items-center overflow-x-auto">
-                <table class="table-auto border border-gray-400">
+            <div class="grid v-screen place-items-center overflow-x-auto pb-10">
+                <table class="bg-white table-auto border border-gray-400">
                     <thead>
                         <tr class="bg-gray-100">
                             <th class="px-2 py-2">#</th>
@@ -146,7 +146,7 @@ const deleteEmployee = (id, name) =>{
                     </tbody>
                 </table>
             </div>
-            <div class="bg-white grid v-screen place-items-center">
+            <div class="grid v-screen place-items-center">
                 <VueTailwindPagination
                     :current="employees.currentPage" :total="employees.total"
                     :per-page="employees.perPage"
